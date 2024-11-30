@@ -1,0 +1,30 @@
+{
+    "ETag": "E2QWRUHAPOMQZL",
+    "DistributionConfig": {
+      "CallerReference": "exampleCallerReference",
+      "Origins": {
+        "Quantity": 1,
+        "Items": [
+          {
+            "Id": "S3-exampleBucket",
+            "DomainName": "exampleBucket.s3.amazonaws.com",
+            "OriginPath": "",
+            "S3OriginConfig": {
+              "OriginAccessIdentity": ""
+            }
+          }
+        ]
+      },
+      "DefaultCacheBehavior": {
+        "TargetOriginId": "S3-exampleBucket",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "AllowedMethods": {
+          "Quantity": 2,
+          "Items": ["GET", "HEAD"]
+        },
+        "MinTTL": 0
+      },
+      "Enabled": true
+    }
+  }
+  
